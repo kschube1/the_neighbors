@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	
+</script>
+
+</head>
+<!-- IMPORTANT START -->
+
+
+<script type="text/javascript">
+	var ajaxFunction = function() {
+		//alert("here comes ajax get your butts ready");
+		$
+				.ajax({
+					type : "post",
+					url : "progress.php",
+					data : {
+						event_id : "59"
+					}
+				})
+				.done(
+						function(data) {
+
+							//alert("your progress is being tracked! YAY!! "
+							//		+ "!!!!!!!" + data + "!!!!!!!")
+						})
+				.fail(
+						function(a, b, c) {
+							alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+						})
+
+	}
+
+	$(document).ready(ajaxFunction)
+</script>
+<body>
+    <script>
+function myFunction() { 
+	document.getElementById("mainFrameOne").style.display="none"; 
+	document.getElementById("mainFrameTwo").style.display="block"; 
+}
+</script>
+    <style>
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*STATUE */ 
+.box {
+  width:45%;
+  height:45%;
+  background-image:   url(orangehouse/orangestat.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:38%;
+  left:23%;
+}
+.box:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}       
+    
+/*SKULL */ 
+.box2 {
+  width:35%;
+  height:35%;
+  background-image:   url(orangehouse/orangeskull.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:35%;
+  left:50%;
+}
+.box2:active > .pin-text2 {
+  display: block;
+}
+
+.pin-text2 {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text2 h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}       
+    
+/*DIRT */ 
+.box3 {
+  width:83%;
+  height:83%;
+  background-image:   url(orangehouse/orangedirtmound.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:13%;
+  left:8%;
+}  
+                    /*BUTTON */ 
+      
+.box5 {
+  width:10%;
+  height:10%;
+  background-image: url(orangehouse/orangebackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:5%;
+  left:5%;
+}
+</style>
+<!-- BACKGROUND-->
+    
+<img src=orangehouse/orangealtar.png width=100% height=100%>
+    
+
+
+<!-- STATUE-->
+        <a href="orangereveal.html">
+  <div id="pin-1" class="box">
+      
+      
+    </div>
+    </a>
+    <!-- SKULL-->
+      <div id="pin-2" class="box2">
+      <div class="pin-text2">
+      <h3>The bones are picked clean.</h3>
+    </div>
+      
+    </div>
+
+    <!-- DIRT-->
+<div id= "pin-3" class="box3" onclick="this.style.display='none';">
+    </div>
+   
+     <!-- BACK-->
+    
+   <a href="orangegarden.html">
+  <div id="pin-5" class="box5">
+      
+    </div>
+        </a>
+    </body>
+</html>
