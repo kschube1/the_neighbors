@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+    </head>
+          
+            <!-- IMPORTANT START --> 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+            <script type="text/javascript" >
+           // alert("is the code even here?");
+            $(document).ready(function() {
+            //alert("here comes ajax get your butts ready");
+            $.ajax({
+                type: "post", url:"progress.php", 
+                data: {event_id: "3"}}).done(
+                function(data) {
+                    
+                   // alert("your progress is being tracked! YAY!! " + "!!!!!!!" + data +  "!!!!!!!");
+                }).fail(function(a,b,c) { 
+                    alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.");
+                }) 
+                
+
+            })
+            </script>
+<body>
+<script>
+    <!-- FRIDGE JS-->
+
+  function multipleImg(id,img1,img2, img3, img4) {
+    src=document.getElementById(id).src;
+    if (src.match(img1)) {
+      document.getElementById(id).src=img2;
+    } else if(src.match(img2)) {
+      document.getElementById(id).src=img3;
+    } else if(src.match(img3)) {
+      document.getElementById(id).src=img4;
+    
+        document.getElementById(id).onclick = function() {
+        window.location.href = "redaltarroom.html"};
+    }
+  }
+         
+  function swapImage(id,primary,secondary) {
+    src=document.getElementById(id).src;
+    if (src.match(primary)) {
+      document.getElementById(id).src=secondary;
+    } else {
+      document.getElementById(id).src=primary;
+    }
+  }
+
+  
+</script>
+    <style>
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*FRIDGE */ 
+.box {
+  width:60%;
+  height:60%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:26%;
+  left:13%;
+}
+        /*SINK */ 
+.box2 {
+  width:15%;
+  height:15%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:53%;
+  left:56%;
+}
+
+         /*STOVE */ 
+.box3 {
+  width:33%;
+  height:33%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:57%;
+  left:72%;
+}
+         /*BUTTON */ 
+      
+.box5 {
+  width:10%;
+  height:10%;
+  background-image: url(redhouse/redbackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:5%;
+  left:5%;
+}
+</style>
+<!-- BACKGROUND-->
+            <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/hotcrossbuns.ogg', 'audio/hotcrossbuns.mp3']
+     }).play();
+</script>
+
+      <img src=redhouse/redkitchen.png width=100% height=100%>
+    
+   <!-- FRIDGE--> 
+  <div id="pin-1" class="box">
+      <img id="desat"  width = "auto" height = 100% onclick="multipleImg('desat', 'redhouse/fridge.png', 'redhouse/fridge2.png', 'redhouse/fridge3.png', 'redhouse/fridge4.png')" src='redhouse/fridge.png' >
+    </div>
+        
+ 
+  
+<!-- SINK-->
+      <div id="pin-2" class="box2">
+<img id="desat2"  width = "auto" height = 100% onclick="swapImage('desat2', 'redhouse/sink.png', 'redhouse/sinkon.png')" src='redhouse/sink.png'>
+</div>
+<!-- STOVE-->
+        <div id="pin-3" class="box3">
+<img id="desat3"  width = "auto" height = 100% onclick="swapImage('desat3', 'redhouse/stove.png', 'redhouse/stoveon.png')" src='redhouse/stove.png'>
+</div>  
+                             
+     <!-- BACK-->
+    
+   <a href="redhouse1.html">
+  <div id="pin-5" class="box5">
+      
+    </div>
+        </a>
+    </body>
+</html>

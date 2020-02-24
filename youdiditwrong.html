@@ -1,0 +1,124 @@
+<html>
+        <head>
+
+           <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+    </head>
+
+<!-- IMPORTANT START --> 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+<script type="text/javascript">
+	var ajaxFunction = function() {
+	//	alert("here comes ajax get your butts ready");
+		$
+				.ajax({
+					type : "post",
+					url : "progress.php",
+					data : {
+						event_id : "65"
+					}
+				})
+				.done(
+						function(data) {
+
+					//		alert("your progress is being tracked! YAY!! "
+					//				+ "!!!!!!!" + data + "!!!!!!!")
+						})
+				.fail(
+						function(a, b, c) {
+							alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+						})
+
+	}
+
+	$(document).ready(ajaxFunction)
+</script>
+
+    <style>
+        body {
+            background-color: black;
+        }
+        /*Cop */ 
+.box {
+  width:100%;
+  height:100%;
+  background-image:   url(copclose.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:0%;
+  left:-20%;
+}
+h1 {
+    font-family: monospace;
+    font-size: 30px;
+    color: white;
+    
+}
+.box3 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+    padding-right: 190px;
+}
+        
+#pin-3 {
+  top:25%;
+  left:50%;
+}
+.box4 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+    padding-right: 210px;
+}
+
+#pin-4 {
+  top:75%;
+  left:50%;
+}
+   .button {
+  background-color: red;
+  opacity: .6;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  font-family: monospace;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+.button:hover {
+  opacity: 1;
+}
+
+    </style>
+    <div id="pin-1" class="box">
+      <div class="pin-text">
+    
+    </div>
+      
+    </div>
+ <div id="pin-3" class="box3">
+     <h1> "Hold the phone. Seems like you're not too sure about all the facts. Why don't you go take a closer look at the evidence, Recruit. We don't take too kindly to guesses around here."</h1>
+    </div>
+ <div id="pin-4" class="box4">
+
+     <a href="page1.html">
+    <button type = "button" class="button">keep investigating</button>
+                </a>
+    </div>
+</html>

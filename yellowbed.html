@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	
+</script>
+
+</head>
+<!-- IMPORTANT START -->
+
+
+<script type="text/javascript">
+	var ajaxFunction = function() {
+		//alert("here comes ajax get your butts ready");
+		$
+				.ajax({
+					type : "post",
+					url : "progress.php",
+					data : {
+						event_id : "41"
+					}
+				})
+				.done(
+						function(data) {
+
+							//alert("your progress is being tracked! YAY!! "
+							//		+ "!!!!!!!" + data + "!!!!!!!")
+						})
+				.fail(
+						function(a, b, c) {
+							alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+						})
+
+	}
+
+	$(document).ready(ajaxFunction)
+</script>
+<body>
+    <style>
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+     
+
+        /*NOTE TUCKED */ 
+.box3 {
+  width:47%;
+  height:47%;
+  background-image:   url(yellowhouse/yellownotetuck.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:53%;
+  left:30%;
+}
+        
+    /*BUTTON */ 
+      
+.box5 {
+  width:10%;
+  height:10%;
+  background-image: url(yellowhouse/yellowbackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:5%;
+  left:5%;
+} 
+       
+</style>
+                <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/happybirthday.ogg', 'audio/happybirthday.mp3']
+     }).play();
+</script>
+<!-- BACKGROUND-->
+    
+<img src=yellowhouse/yellowbedtuck.png width=100% height=100%>
+
+    
+
+ <!-- BED-->
+    
+   <a href="yellownote.html">
+  <div id="pin-3" class="box3">
+      
+    </div>
+        </a>
+ <!-- BACK-->
+    
+   <a href="yellowbedroom.html">
+  <div id="pin-5" class="box5">
+      
+    </div>
+        </a>
+
+
+    </body>
+</html>

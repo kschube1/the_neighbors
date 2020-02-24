@@ -1,0 +1,425 @@
+<html>
+    <head>
+        <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	
+</script>
+
+</head>
+<!-- IMPORTANT START -->
+
+
+<script type="text/javascript">
+	var ajaxFunction = function() {
+		//alert("here comes ajax get your butts ready");
+		$
+				.ajax({
+					type : "post",
+					url : "progress.php",
+					data : {
+						event_id : "39"
+					}
+				})
+				.done(
+						function(data) {
+
+							//alert("your progress is being tracked! YAY!! "
+							//		+ "!!!!!!!" + data + "!!!!!!!")
+						})
+				.fail(
+						function(a, b, c) {
+							alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+						})
+
+	}
+
+	$(document).ready(ajaxFunction)
+</script>
+<body>
+    
+    
+
+    <style>
+        /*-------TABLET VIEWING------ */ 
+@media only screen and (max-width: 900px) {
+   /*TROPHIES */ 
+.box {
+  width:15%;
+  height:15%;
+  background-image: url(yellowhouse/yellowtrophytablet.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:18%;
+  left:41%;
+}
+.box:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}  
+    /*DOORWAY */ 
+.box2 {
+  width:30%;
+  height:30%;
+  background-image:   url(yellowhouse/yellowdoortablet.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:67%;
+  left:55%;
+}
+       /*YELLOW MAN */ 
+.box3 {
+  width:35%;
+  height:35%;
+  background-image:   url(yellowhouse/yellowman.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:63%;
+  left:4%;
+}
+ .box3:active > .pin-text3 {
+  display: block;
+}
+
+.pin-text3 {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text3 h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+} 
+            /*BUTTON */ 
+      
+.box5 {
+  width:10%;
+  height:10%;
+  background-image: url(yellowhouse/yellowbackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:5%;
+  left:5%;
+}
+        }
+         /*-------PHONE VIEWING------ */  
+@media only screen and (max-width: 480px) {
+       /*TROPHIES */ 
+.box {
+  width:15%;
+  height:15%;
+  background-image: url(yellowhouse/yellowtrophyphone.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:18%;
+  left:41%;
+}
+.box:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}  
+    /*DOORWAY */ 
+.box2 {
+  width:22%;
+  height:22%;
+  background-image:   url(yellowhouse/yellowdoorphone.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:58%;
+  left:38%;
+}
+        /*YELLOW MAN */ 
+.box3 {
+  width:35%;
+  height:35%;
+  background-image:   url(yellowhouse/yellowman.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:63%;
+  left:8%;
+}
+ .box3:active > .pin-text3 {
+  display: block;
+}
+
+.pin-text3 {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text3 h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}
+            /*BUTTON */ 
+      
+.box5 {
+  width:10%;
+  height:10%;
+  background-image: url(yellowhouse/yellowbackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:5%;
+  left:5%;
+}
+        }
+         /*-------REGULAR VIEWING------ */ 
+@media only screen and (min-width: 901px) {
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*TROPHIES */ 
+.box {
+  width:15%;
+  height:15%;
+  background-image:   url(yellowhouse/yellowtrophies.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:19%;
+  left:41%;
+}
+.box:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}       
+    
+          
+/*DOORWAY */ 
+.box2 {
+  width:60%;
+  height:60%;
+  background-image:   url(yellowhouse/yellowdoorway.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:35%;
+  left:63%;
+}
+    /*YELLOW MAN */ 
+.box3 {
+  width:40%;
+  height:40%;
+  background-image:   url(yellowhouse/yellowman.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:60%;
+  left:0%;
+}
+ .box3:active > .pin-text3 {
+  display: block;
+}
+
+.pin-text3 {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text3 h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}   
+        /*BUTTON */ 
+      
+.box5 {
+  width:10%;
+  height:10%;
+  background-image: url(yellowhouse/yellowbackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:5%;
+  left:5%;
+}
+        
+        }
+       
+</style>
+            <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/happybirthday.ogg', 'audio/happybirthday.mp3']
+     }).play();
+</script>
+
+<!-- BACKGROUND-->
+    
+<img src=yellowhouse/yellowhouse1.png width=100% height=100%>
+    <!-- TROPHIES-->
+
+  <div id="pin-1" class="box">
+      <div class="pin-text">
+      <h3>A proud display of trophies.</h3>
+    </div>
+      
+    </div>
+    
+ <!-- DOORWAY-->
+    
+   <a href="yellowbedroom.html">
+  <div id="pin-2" class="box2">
+      
+    </div>
+        </a>
+
+    <!-- YELLOW MAN-->
+
+       <a href="yellowman1.html">
+    
+  <div id="pin-3" class="box3">
+    
+      
+    </div>
+    </a>
+     <!-- BACK-->
+    
+   <a href="page1.html">
+  <div id="pin-5" class="box5">
+      
+    </div>
+        </a>
+   
+
+    </body>
+</html>

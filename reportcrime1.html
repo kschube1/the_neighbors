@@ -1,0 +1,111 @@
+<html>
+    <head>
+           <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+    </head>
+<body>
+    <style>
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*Cop */ 
+.box {
+  width:70%;
+  height:70%;
+  background-image:   url(cop.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:25%;
+  left:-20%;
+}
+.box:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:50%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}       
+    
+                     /*BUTTON */ 
+      
+.box5 {
+  width:20%;
+  height:20%;
+  background-image: url(reportcrimebuttom.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:75%;
+  left:40%;
+}
+          
+</style>
+                        <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/cops.ogg', 'audio/cops.mp3']
+     }).play();
+</script>
+<!-- BACKGROUND-->
+    
+<img src=reportcrimebackground.png width=100% height=100%>
+    
+   
+    <!-- COP-->
+
+  <div id="pin-1" class="box">
+      <div class="pin-text">
+      <h3>This cop takes his job</h3>
+           <h3>very seriously.</h3>
+    </div>
+      
+    </div>
+    
+     <!-- BACK-->
+    
+   <a href="results.html">
+  <div id="pin-5" class="box5">
+      
+    </div>
+        </a>
+
+   
+
+    </body>
+</html>

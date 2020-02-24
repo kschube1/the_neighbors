@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta http-equiv="refresh" content="7;url=redaltarroomclose.html" />
+    </head>
+<body>
+
+<!-- IMPORTANT START --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+<script type="text/javascript" >
+$(document).ready(function() {
+//alert("here comes ajax get your butts ready");
+$.ajax({
+    type: "post", url:"progress.php", 
+    data: {event_id: "9"}}).done(
+    function(data) {
+        
+        //alert("your progress is being tracked! YAY!! " + "!!!!!!!" + data +  "!!!!!!!")
+    }).fail(function(a,b,c) { 
+        alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+    }) 
+    
+
+})
+
+</script>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        /*BUTTON */ 
+      
+.listen {
+  width:40%;
+  height:40%;
+  background-image: url(redhouse/redlisten.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#listen-id {
+  top:25%;
+  left:30%;
+}
+
+</style>
+
+  <div id="listen-id" class="listen">
+      
+    </div>
+
+                <audio autoplay loop>
+		<source src= "redhouse/murder.mp3" type="audio/mpeg">
+		<source src= "redhouse/murder.ogg" type="audio/ogg">
+        
+	</audio>
+
+
+ 
+   
+
+    </body>
+</html>

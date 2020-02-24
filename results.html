@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html>
+    <script src="reportcrime.js"></script>
+    <script type="text/javascript">
+	var ajaxFunction = function() {
+		alert("here comes ajax get your butts ready");
+		$
+				.ajax({
+					type : "post",
+					url : "progress.php",
+					data : {
+						event_id : "63"
+					}
+				})
+				.done(
+						//function(data) {
+
+							//alert("your progress is being tracked! YAY!! "
+								//	+ "!!!!!!!" + data + //"!!!!!!!")
+						})
+				.fail(
+						function(a, b, c) {
+							alert("Your progress is not being tracked. Please contact developer: ME.")
+						})
+
+	}
+
+	$(document).ready(ajaxFunction)
+</script>
+    <style>
+        .button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  font-family: monospace;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+        a:link {
+  text-decoration: none;
+}
+    TD {
+        font-family: monospace; 
+        font-size: 25pt;
+        padding-left: 30px;
+        padding-right: 45px;
+        width: 25%;
+        font-weight: bold;
+        
+    
+        }
+            TH {
+        font-family: monospace; 
+        font-size: 30pt;
+        padding-top: 30px;
+                padding-bottom: 30px;
+        }
+        select, option{
+        font-size: 25px;
+        font-family: monospace;
+}
+        .spacing{
+            background-image:url(formbackground.png);
+             background-repeat:no-repeat;
+    background-size:100% 100%;
+            
+        }
+        .tablespacing {
+            
+            position: relative;
+            left:20px;
+            width:90%;
+        }
+
+
+
+    </style>
+<body>
+
+
+    <div class="spacing">
+<table  style="width:100%"  class="tablespacing">
+  <tr >
+    <th >suspect</th>
+    <th>the crime</th> 
+    <th>the motive</th>
+
+  </tr>
+  <tr>
+    <td height="77" bgcolor = "#ba0202">redman</td>
+    <td><select  id = "redmanc" style = "width:100%" >     
+        <option redmancrime="select">-select-</option>
+                <option redmancrime="cannibalism">cannibalism</option>
+                <option redmancrime="murder">murder</option>
+                <option redmancrime="theft">theft</option>
+                <option redmancrime="staying">staying quiet</option>
+                <option redmancrime="planning">planning crime</option>
+                <option redmancrime="bribery">bribery</option>
+                <option redmancrime="vandalism">vandalism</option>
+                <option redmancrime="none">none</option>
+        </select></td>
+    <td><select id = "redmanm" style = "width:100%" >
+                <option redmanmotive="select">-select-</option>
+                <option redmanmotive="jealousy">jealousy</option>
+                <option redmanmotive="greed">greed</option>
+                <option redmanmotive="peer">peer pressure</option>
+                <option redmanmotive="revenge">revenge</option>
+                <option redmanmotive="bloodlust">bloodlust</option>
+            <option redmanmotive="boredom">boredom</option>
+            <option redmanmotive="hunger">hunger</option>
+        <option redmanmotive="none">none</option>
+        </select></td>
+
+
+  </tr>
+  <tr>
+    <td height="77" bgcolor = "#50428c">purpleman</td>
+     <td><select id = "purplemanc" style = "width:100%" >                <option purplemancrime="select">-select-</option>
+                <option purplemancrime="cannibalism">cannibalism</option>
+                <option purplemancrime="murder">murder</option>
+                <option purplemancrime="theft">theft</option>
+                <option purplemancrime="staying">staying quiet</option>
+                <option purplemancrime="planning">planning crime</option>
+                <option purplemancrime="bribery">bribery</option>
+                <option purplemancrime="vandalism">vandalism</option>
+                <option purplemancrime="none">none</option>
+        </select></td>
+    <td><select id = "purplemanm" style = "width:100%" > 
+                <option purplemanmotive="select">-select-</option>
+
+                <option purplemanmotive="jealousy">jealousy</option>
+                <option purplemanmotive="greed">greed</option>
+                <option purplemanmotive="peer">peer pressure</option>
+                <option purplemanmotive="revenge">revenge</option>
+                <option purplemanmotive="bloodlust">bloodlust</option>
+            <option purplemanmotive="boredom">boredom</option>
+            <option purplemanmotive="hunger">hunger</option>
+        <option purplemanmotive="none">none</option>
+        </select></td>
+  </tr>
+  <tr>
+    <td height="77" bgcolor = "#c53c96">pinkman</td>
+     <td><select id = "pinkmanc" style = "width:100%" >  
+                 <option pinkmancrime="select">-select-</option>
+
+                <option pinkmancrime="cannibalism">cannibalism</option>
+                <option pinkmancrime="murder">murder</option>
+                <option pinkmancrime="theft">theft</option>
+                <option pinkmancrime="staying">staying quiet</option>
+                <option pinkmancrime="planning">planning crime</option>
+                <option pinkmancrime="bribery">bribery</option>
+                <option pinkmancrime="vandalism">vandalism</option>
+                <option pinkmancrime="none">none</option>
+        </select></td>
+    <td><select id = "pinkmanm" style = "width:100%" >  
+                <option pinkmanmotive="select">-select-</option>
+                <option pinkmanmotive="jealousy">jealousy</option>
+                <option pinkmanmotive="greed">greed</option>
+                <option pinkmanmotive="peer">peer pressure</option>
+                <option pinkmanmotive="revenge">revenge</option>
+                <option pinkmanmotive="bloodlust">bloodlust</option>
+            <option pinkmanmotive="boredom">boredom</option>
+            <option pinkmanmotive="hunger">hunger</option>
+        <option pinkmanmotive="none">none</option>
+        </select></td>
+  </tr>
+    <tr>
+    <td height="77" bgcolor = "#f4921e">orangeman</td>
+         <td><select id = "orangemanc" style = "width:100%" >        <option orangemancrime="select">-select-</option>
+                <option orangemancrime="cannibalism">cannibalism</option>
+                <option orangemancrime="murder">murder</option>
+                <option orangemancrime="theft">theft</option>
+                <option orangemancrime="staying">staying quiet</option>
+                <option orangemancrime="planning">planning crime</option>
+                <option orangemancrime="bribery">bribery</option>
+                <option orangemancrime="vandalism">vandalism</option>
+                <option orangemancrime="none">none</option>
+        </select></td>
+    <td><select id = "orangemanm" style = "width:100%" > 
+                <option orangemanmotive="select">-select-</option>
+
+                <option orangemanmotive="jealousy">jealousy</option>
+                <option orangemanmotive="greed">greed</option>
+                <option orangemanmotive="peer">peer pressure</option>
+                <option orangemanmotive="revenge">revenge</option>
+                <option orangemanmotive="bloodlust">bloodlust</option>
+            <option orangemanmotive="boredom">boredom</option>
+            <option orangemanmotive="hunger">hunger</option>
+        <option orangemanmotive="none">none</option>
+        </select></td>
+    </tr>
+    <tr>
+    <td height="77" bgcolor = "#ffeb08">yellowman</td>
+                  <td><select id = "yellowmanc" style = "width:100%" >  
+                <option yellowmancrime="select">-select-</option>
+
+                <option yellowmancrime="cannibalism">cannibalism</option>
+                <option yellowmancrime="murder">murder</option>
+                <option yellowmancrime="theft">theft</option>
+                <option yellowmancrime="staying">staying quiet</option>
+                <option yellowmancrime="planning">planning crime</option>
+                <option yellowmancrime="bribery">bribery</option>
+                <option yellowmancrime="vandalism">vandalism</option>
+                <option yellowmancrime="none">none</option>
+        </select></td>
+    <td><select id = "yellowmanm" style = "width:100%" > 
+                <option yellowmanmotive="select">-select-</option>
+
+                <option yellowmanmotive="jealousy">jealousy</option>
+                <option yellowmanmotive="greed">greed</option>
+                <option yellowmanmotive="peer">peer pressure</option>
+                <option yellowmanmotive="revenge">revenge</option>
+                <option yellowmanmotive="bloodlust">bloodlust</option>
+            <option yellowmanmotive="boredom">boredom</option>
+            <option yellowmanmotive="hunger">hunger</option>
+        <option yellowmanmotive="none">none</option>
+        </select></td>
+    </tr>
+    <tr>
+    <td height="77" bgcolor = "#FFFFFF"><a onclick = "reportcrime()"> submit crime report </a></td>
+        <td></td>
+        <td>
+            <a href="page1.html">
+    <button type = "button" class="button">keep investigating</button>
+                </a>
+        </td>
+   
+    </tr>
+        <tr>
+    <td height="25">  </td>
+    </tr>
+        
+   
+</table>
+     </div>
+
+
+</body>
+</html>

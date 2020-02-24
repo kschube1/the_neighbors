@@ -1,0 +1,114 @@
+
+<html> <head>
+   <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+   <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	
+</script>
+    <script> 
+           
+    function getAddress() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+     window.location.href = vars["goBack"];
+}
+	
+    </script>
+
+</head>
+<!-- IMPORTANT START -->
+
+
+
+          <script>
+	
+function R(n) {
+	seed = (0x015a4e35 * seed) % 0x7fffffff;
+	return (seed >> 16) % n;
+}
+              
+
+var now = new Date();
+var seed = now.getTime() % 0xffffffff;
+var x = (R(4)+1);
+              
+</script>
+ <style>
+     body {
+         background-color: black;
+     }
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*chat*/
+.box {
+  width:50%;
+  height:50%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:38%;
+  left:25%;
+}
+                 /*BUTTON */ 
+      
+.box8 {
+  width:12%;
+  height:12%;
+  background-image: url(redhouse/okbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-8 {
+  top:65%;
+  left:43%;
+}
+    </style>
+
+
+       <!-- PAINTING--> 
+    
+    
+<div id="pin-1" class="box">
+<script>
+
+document.write ('<img src=redanswer' + x +'.png width=100% height=45%>')
+</script>
+    </div> 
+
+
+
+    
+     <!-- BACK-->
+    
+   <a href="javascript: getAddress();">
+  <div id="pin-8" class="box8">
+      
+    </div>
+        </a>
+
+</html>
