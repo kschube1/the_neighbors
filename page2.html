@@ -1,0 +1,195 @@
+<html>
+    <head>
+           <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+    </head>
+<body>
+    <script>
+       
+    function R(n) {
+	seed = (0x015a4e35 * seed) % 0x7fffffff;
+	return (seed >> 16) % n;
+}
+
+var now = new Date();
+var seed = now.getTime() % 0xffffffff;
+    </script>
+       <style>
+           
+           body {
+               background-color: black;
+           }
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*RED HOUSE */ 
+.box {
+  width:30%;
+  height:30%;
+  background-image:   url(redhome.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+#pin-1 {
+  top:45%;
+  left:-3%;
+}
+/*PURPLE HOUSE */ 
+.box2 {
+  width:20%;
+  height:20%;
+  background-image:   url(purplehome.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+#pin-2 {
+  top:55%;
+  left:22%;
+}
+/*PINK HOUSE */ 
+.box3 {
+  width:30%;
+  height:30%;
+  background-image:   url(pinkhome.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+#pin-3 {
+  top:45%;
+  left:35%;
+}
+/*YELLOW HOUSE */ 
+.box4 {
+  width:20%;
+  height:20%;
+  background-image:   url(yellowhome.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+#pin-4 {
+  top:55%;
+  left:58%;
+}
+/*ORANGE HOUSE */ 
+.box5 {
+  width:32%;
+  height:32%;
+  background-image:   url(orangehome.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+#pin-5 {
+  top:44%;
+  left:69%;
+}
+           /*PHONE  */ 
+.box6 {
+  width:20%;
+  height:20%;
+  background-image:   url(phone.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+#pin-6 {
+  top:80%;
+  left:39%;
+}
+                      /*POLICE  */ 
+.box7 {
+  width:20%;
+  height:20%;
+  background-image:   url(policecar.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+#pin-7 {
+  top:70%;
+  left:69%;
+}
+</style>
+    <!-- BACKGROUND-->
+<script>
+document.write ('<img src=neighborhood' + (R(4)+1) +'.gif width=100% height=100%>')
+</script>
+         <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/cops.ogg', 'audio/cops.mp3']
+     }).play();
+</script>
+
+
+    <!-- RED HOUSE-->
+    <a href="redhouse1.html">
+  <div id="pin-1" class="box">
+      
+    </div>
+        </a>
+    <!-- PURPLE HOUSE-->
+    <a href="purplehouse1.html">
+  <div id="pin-2" class="box2">
+      
+    </div>
+        </a>
+    <!-- PINK HOUSE-->
+    <a href="pinkhouse1.html">
+  <div id="pin-3" class="box3">
+      
+    </div>
+        </a>
+    <!-- YELLOW HOUSE-->
+    <a href="yellowhouse1.html">
+  <div id="pin-4" class="box4">
+      
+    </div>
+        </a>
+    <!-- ORANGE HOUSE-->
+    <a href="orangehouse1.html">
+  <div id="pin-5" class="box5">
+      
+    </div>
+        </a>
+
+    <!-- POLICE CAR -->
+    <a href="reportcrime1.html">
+  <div id="pin-7" class="box7">
+      
+    </div>
+        </a>
+    </body>
+</html>

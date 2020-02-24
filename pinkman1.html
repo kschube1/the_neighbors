@@ -1,0 +1,244 @@
+<html>
+    <head>
+
+        <script>
+       
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+    </head>
+<body>
+
+            <!-- IMPORTANT START --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+<script type="text/javascript" >
+$(document).ready(function() {
+//alert("here comes ajax get your butts ready");
+$.ajax({
+    type: "post", url:"progress.php", 
+    data: {event_id: "68"}}).done(
+    function(data) {
+        
+        //alert("your progress is being tracked! YAY!! " + "!!!!!!!" + data +  "!!!!!!!")
+    }).fail(function(a,b,c) { 
+        alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+    }) 
+    
+
+})
+
+  
+
+</script>
+      <style>
+          
+          
+            /*-------REGULAR VIEWING------ */ 
+
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+
+/*pinkman */ 
+      
+.box4 {
+  width:100%;
+  height:100%;
+  background-image: url(pinkhouse/pinkmanchat.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-4 {
+  top:-1%;
+  left:25%;
+}
+          
+/*paper 1*/ 
+      
+.box6 {
+  width:25%;
+  height:25%;
+  background-image: url(paper1.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  transition: transform .2s; /* Animation */
+
+}
+
+
+#pin-6 {
+  top:0%;
+  left:20%;
+}
+.box6:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+/*paper 2*/ 
+      
+.box7 {
+  width:25%;
+  height:25%;
+  background-image: url(paper2.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  transition: transform .2s; /* Animation */
+
+}
+
+
+#pin-7 {
+  top:20%;
+  left:20%;
+}
+.box7:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+/*paper 3*/ 
+      
+.box8 {
+  width:25%;
+  height:25%;
+  background-image: url(paper4.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  transition: transform .2s; /* Animation */
+
+}
+
+
+#pin-8 {
+  top:40%;
+  left:20%;
+}
+.box8:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+/*paper 4*/ 
+      
+.box9 {
+  width:25%;
+  height:25%;
+  background-image: url(paper5.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  transition: transform .2s; /* Animation */
+
+}
+
+
+#pin-9 {
+  top:60%;
+  left:20%;
+}
+.box9:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+    /*BUTTON */ 
+      
+.box5 {
+  width:10%;
+  height:10%;
+  background-image: url(pinkhouse/pinkbackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:5%;
+  left:5%;
+}
+    
+          
+</style>
+        <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/hotcrossbuns.ogg', 'audio/hotcrossbuns.mp3']
+     }).play();
+</script>
+
+
+    <!-- BACKGROUND-->
+    
+      <img src=pinkhouse/pinkchat.png width=100% height=100%>
+    
+ 
+    <!-- REDMAN-->
+    
+
+  <div id="pin-4" class="box4" onclick="newQuote()">
+  <div id = "help" class="pin-text" onclick="newQuote()">
+     
+    </div>
+      
+
+    </div>
+     <!-- paper1-->
+       <a href="redpaper.html?goBack=pinkman1.html">
+  <div id="pin-6" class="box6">
+      
+    </div>
+           </a>
+     <!-- paper1-->
+    <a href="purplepaper.html?goBack=pinkman1.html">
+  <div id="pin-7" class="box7">
+      
+    </div>
+        </a>
+     <!-- paper1-->
+    <a href="yellowpaper.html?goBack=pinkman1.html">
+  <div id="pin-8" class="box8">
+      
+    </div>
+    </a>
+     <!-- paper1-->
+        <a href="orangepaper.html?goBack=pinkman1.html">
+  <div id="pin-9" class="box9">
+      
+    </div>
+     </a>
+     <!-- BACK-->
+    
+   <a href="pinkhouse1.html">
+  <div id="pin-5" class="box5">
+      
+    </div>
+        </a>
+    </body>
+</html>

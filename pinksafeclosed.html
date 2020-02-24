@@ -1,0 +1,138 @@
+<html>
+    <head>
+           <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+ <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	
+</script>
+
+</head>
+<!-- IMPORTANT START -->
+
+
+<script type="text/javascript">
+	var ajaxFunction = function() {
+		//alert("here comes ajax get your butts ready");
+		$
+				.ajax({
+					type : "post",
+					url : "progress.php",
+					data : {
+						event_id : "34"
+					}
+				})
+				.done(
+						function(data) {
+
+						//	alert("your progress is being tracked! YAY!! "
+						//			+ "!!!!!!!" + data + "!!!!!!!")
+						})
+				.fail(
+						function(a, b, c) {
+							alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+						})
+
+	}
+
+	$(document).ready(ajaxFunction)
+</script>
+<body>
+    <style>
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*SAFE */ 
+.box {
+  width:40%;
+  height:40%;
+  background-image:   url(pinkhouse/pinksafeclosed.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:30%;
+  left:30%;
+}
+/*PAINTING GIF */ 
+.box2 {
+  width:100%;
+  height:100%;
+  background-image:   url(pinkhouse/pinklookingpaint.gif);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:2%;
+  left:0%;
+}
+    
+            /*BUTTON */ 
+      
+.box8 {
+  width:10%;
+  height:10%;
+  background-image: url(pinkhouse/pinkbackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-8 {
+  top:5%;
+  left:5%;
+}
+          
+</style>
+                        <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/littlelambX.ogg', 'audio/littlelambX.mp3']
+     }).play();
+</script>
+<!-- SAFE-->
+    
+<img src=pinkhouse/pinkwall.png width=100% height=100%>
+    
+   <!-- FOUNTAIN--> 
+
+   <a href="pinksafeopen.html">
+  <div id="pin-1" class="box">
+    </div>
+    </a>
+       <!-- DIRT-->
+<div id= "pin-2" class="box2" onclick="this.style.display='none';">
+    </div>
+     <!-- BACK-->
+    
+   <a href="pinkbedroomrand.html">
+  <div id="pin-8" class="box8">
+      
+    </div>
+        </a>
+    </body>
+</html>

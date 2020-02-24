@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+    </head>
+    <!-- IMPORTANT START -->
+
+
+<script type="text/javascript">
+
+
+var ajaxFunction = function() {
+	//alert("here comes ajax get your butts ready");
+	$
+			.ajax({
+				type : "post",
+				url : "progress.php",
+				data : {
+					event_id : "16"
+				}
+			})
+			.done(
+					function(data) {
+
+						//alert("your progress is being tracked! YAY!! "
+						//		+ "!!!!!!!"
+						//		+ data
+						//		+ "!!!!!!!")
+					})
+			.fail(
+					function(a, b, c) {
+						alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+					})
+
+}
+
+$(document).ready(ajaxFunction)
+</script>
+<body>
+       <script type="text/javascript">
+  function swapImage(id,primary,secondary) {
+    src=document.getElementById(id).src;
+    if (src.match(primary)) {
+      document.getElementById(id).src=secondary;
+    } else {
+      document.getElementById(id).src=primary;
+    }
+  }
+           
+            
+  function multipleImg(id,img1,img2) {
+    src=document.getElementById(id).src;
+    if (src.match(img1)) {
+      document.getElementById(id).src=img2;
+        document.getElementById(id).onclick = function() {
+        window.location.href = "purplealtar.html"};
+    } 
+  }
+       
+</script>
+    <style>
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*HANGING CLOTHES */ 
+.box {
+  width:33%;
+  height:33%;
+  background-image:   url(purplehouse/purpleclothes.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:13%;
+  left:22%;
+}
+.box:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}       
+    
+          
+/*FLOOR CLOTHES */ 
+.box2 {
+  width:15%;
+  height:15%;
+  
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:66%;
+  left:27%;
+}
+        
+           /*BACK BUTTON */ 
+.box4 {
+  width:10%;
+  height:10%;
+  background-image:   url(purplehouse/purplebackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-4 {
+  top:5%;
+  left:5%;
+}
+       
+</style>
+                    <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/twinkletwinkle.ogg', 'audio/twinkletwinkle.mp3']
+     }).play();
+</script>
+<!-- BACKGROUND-->
+    
+<img src=purplehouse/purplecloset.png width=100% height=100%>
+    <!-- HANGING CLOTHES-->
+
+  <div id="pin-1" class="box">
+      <div class="pin-text">
+      <h3>All the clothes have been left.</h3>
+    </div>
+      
+    </div>
+    
+ <!-- FLOOR CLOTHES-->
+    
+
+  <div id="pin-2" class="box2">
+      <img id="desat"  width = "auto" height = 100% onclick="multipleImg('desat', 'purplehouse/floorclothes.png', 'purplehouse/purplehole.png')" src='purplehouse/floorclothes.png' >
+    </div>
+    <!-- BACK-->
+    
+   <a href="purplebedroom.html">
+  <div id="pin-4" class="box4">
+      
+    </div>
+        </a> 
+
+    </body>
+
+</html>

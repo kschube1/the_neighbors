@@ -1,0 +1,250 @@
+<html>
+<head>
+<script type="text/javascript">
+	function preventBack() {
+		window.history.forward();
+	}
+	setTimeout("preventBack()", 0);
+	window.onunload = function() {
+		null
+	};
+</script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	
+</script>
+
+</head>
+<!-- IMPORTANT START -->
+
+
+<script type="text/javascript">
+	var ajaxFunction = function() {
+		//alert("here comes ajax get your butts ready");
+		$
+				.ajax({
+					type : "post",
+					url : "progress.php",
+					data : {
+						event_id : "23"
+					}
+				})
+				.done(
+						function(data) {
+
+						//	alert("your progress is being tracked! YAY!! "
+						//			+ "!!!!!!!" + data + "!!!!!!!")
+						})
+				.fail(
+						function(a, b, c) {
+							alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+						})
+
+	}
+
+	$(document).ready(ajaxFunction)
+</script>
+<body>
+	<style>
+.map {
+	margin: 10px;
+	border: 5px solid red;
+	position: relative;
+	display: inline-block;
+}
+
+.map img {
+	max-width: 100%;
+	display: block;
+}
+/*PURPLE MAN */
+.box {
+	width: 35%;
+	height: 35%;
+	background-image: url(purplehouse/purpleman.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+
+#pin-1 {
+	top: 58%;
+	left: 30%;
+}
+
+.box:active>.pin-text {
+	display: block;
+}
+
+.pin-text {
+	font-family: monospace;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 75%;
+	white-space: nowrap;
+	display: none;
+}
+
+.pin-text h3 {
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+}
+
+/*LEFT NOTES */
+.box2 {
+	width: 45%;
+	height: 45%;
+	background-image: url(purplehouse/purplebasementnotes1.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+
+#pin-2 {
+	top: 38%;
+	left: -14%;
+}
+
+.box2:active>.pin-text2 {
+	display: block;
+}
+
+.pin-text2 {
+	font-family: monospace;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 60%;
+	white-space: nowrap;
+	display: none;
+}
+
+.pin-text2 h3 {
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+}
+/*RIGHT NOTES */
+.box3 {
+	width: 45%;
+	height: 45%;
+	background-image: url(purplehouse/purplebasementnotes2.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+
+#pin-3 {
+	top: 41%;
+	left: 70%;
+}
+
+.box3:active>.pin-text3 {
+	display: block;
+}
+
+.pin-text3 {
+	font-family: monospace;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0%;
+	white-space: nowrap;
+	display: none;
+}
+
+.pin-text3 h3 {
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+}
+
+/*BACK BUTTON */
+.box4 {
+	width: 10%;
+	height: 10%;
+	background-image: url(purplehouse/purplebackbutton.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+
+#pin-4 {
+	top: 5%;
+	left: 5%;
+}
+/*CRACK */
+.box5 {
+	width: 30%;
+	height: 30%;
+	background-image: url(purplehouse/purplecrack.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+
+#pin-5 {
+	top: 30%;
+	left: 55%;
+}
+</style>
+	<!-- AUDIO-->
+	<script type="text/javascript" src="howler.min.js"></script>
+	<script type="text/javascript">
+		var sound = new Howl({
+			loop : true,
+			src : [ 'audio/twinkletwinkleX.ogg', 'audio/twinkletwinkleX.mp3' ]
+		}).play();
+	</script>
+	<!-- BACKGROUND-->
+
+
+	<img src=purplehouse/purplebasement.png width=100% height=100%>
+	<!-- PURPLE MAN-->
+
+	<div id="pin-1" class="box">
+		<div class="pin-text">
+			<h3>...</h3>
+		</div>
+
+	</div>
+
+	<!-- LEFT NOTES-->
+
+
+	<div id="pin-2" class="box2">
+		<div class="pin-text2">
+			<h3>These papers are nailed</h3>
+			<h3>to the wall.</h3>
+		</div>
+	</div>
+
+	<!-- RIGHT NOTES-->
+
+
+	<div id="pin-3" class="box3">
+		<div class="pin-text3">
+			<h3>The words "DON'T SPEAK" are</h3>
+			<h3>scribbled all over.</h3>
+		</div>
+	</div>
+
+	<!-- BACK-->
+
+	<a href="purplebedroom.html">
+		<div id="pin-4" class="box4"></div>
+	</a>
+
+	<!-- CRACK-->
+
+	<a href="purplecrack.html">
+		<div id="pin-5" class="box5"></div>
+	</a>
+
+
+</body>
+</html>

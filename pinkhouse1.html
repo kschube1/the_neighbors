@@ -1,0 +1,538 @@
+<html>
+    <head>
+        <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+   <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	
+</script>
+
+</head>
+<!-- IMPORTANT START -->
+
+
+<script type="text/javascript">
+	var ajaxFunction = function() {
+		//alert("here comes ajax get your butts ready");
+		$
+				.ajax({
+					type : "post",
+					url : "progress.php",
+					data : {
+						event_id : "29"
+					}
+				})
+				.done(
+						function(data) {
+
+						//	alert("your progress is being tracked! YAY!! "
+						//			+ "!!!!!!!" + data + "!!!!!!!")
+						})
+				.fail(
+						function(a, b, c) {
+							alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+						})
+
+	}
+
+	$(document).ready(ajaxFunction)
+</script>
+<body>
+
+    <style>
+         /*-------TABLET VIEWING------ */ 
+@media only screen and (max-width: 900px) {
+    map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*DOORWAY1 */ 
+.box {
+  width:50%;
+  height:50%;
+  background-image:   url(pinkhouse/pinkdoortablet.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:17%;
+  left:5%;
+}
+
+    
+          
+/*DOORWAY2 */ 
+.box2 {
+  width:37%;
+  height:37%;
+  background-image:   url(pinkhouse/pinkdoortablet.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:24%;
+  left:20%;
+}
+ 
+          
+/*DOORWAY3 */ 
+.box3 {
+  width:37%;
+  height:37%;
+  background-image:   url(pinkhouse/pinkdoortablet2.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:24%;
+  left:40%;
+}
+
+          
+/*DOORWAY4 */ 
+.box4 {
+  width:50%;
+  height:50%;
+  background-image:   url(pinkhouse/pinkdoortablet2.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-4 {
+  top:17%;
+  left:45%;
+}
+      
+/*FOUNTAIN */ 
+.box5 {
+  width:12%;
+  height:12%;
+  background-image:   url(pinkhouse/pinkfountaintablet.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:43%;
+  left:43%;
+}
+
+/*PINKMAN */ 
+.box6 {
+  width:40%;
+  height:40%;
+  background-image:   url(pinkhouse/pinkman.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-6 {
+  top:55%;
+  left:41%;
+}
+.box6:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}   
+                /*BUTTON */ 
+      
+.box8 {
+  width:10%;
+  height:10%;
+  background-image: url(pinkhouse/pinkbackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-8 {
+  top:5%;
+  left:5%;
+}
+  
+        }
+         /*-------PHONE VIEWING------ */  
+@media only screen and (max-width: 480px) {
+    /*DOORWAY1 */ 
+.box {
+  width:50%;
+  height:50%;
+  background-image:   url(pinkhouse/pinkdoorphone.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:18%;
+  left:5%;
+}
+
+    
+          
+/*DOORWAY2 */ 
+.box2 {
+  width:37%;
+  height:37%;
+  background-image:   url(pinkhouse/pinkdoorphone.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:25%;
+  left:20%;
+}
+ 
+          
+/*DOORWAY3 */ 
+.box3 {
+  width:37%;
+  height:37%;
+  background-image:   url(pinkhouse/pinkdoorphone.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:25%;
+  left:40%;
+}
+
+          
+/*DOORWAY4 */ 
+.box4 {
+  width:50%;
+  height:50%;
+  background-image:   url(pinkhouse/pinkdoorphone.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-4 {
+  top:18%;
+  left:45%;
+}
+          
+/*FOUNTAIN */ 
+.box5 {
+  width:12%;
+  height:12%;
+  background-image:   url(pinkhouse/pinkfountainphone.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:55%;
+  left:43%;
+}
+                /*BUTTON */ 
+      
+.box8 {
+  width:10%;
+  height:10%;
+  background-image: url(pinkhouse/pinkbackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-8 {
+  top:5%;
+  left:5%;
+}
+  
+        }
+         
+        /*-------REGULAR VIEWING------ */ 
+@media only screen and (min-width: 901px) {
+    
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*DOORWAY1 */ 
+.box {
+  width:50%;
+  height:50%;
+  background-image:   url(pinkhouse/door1.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:37%;
+  left:5%;
+}
+
+    
+          
+/*DOORWAY2 */ 
+.box2 {
+  width:37%;
+  height:37%;
+  background-image:   url(pinkhouse/door2.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:37%;
+  left:20%;
+}
+ 
+          
+/*DOORWAY3 */ 
+.box3 {
+  width:37%;
+  height:37%;
+  background-image:   url(pinkhouse/door3.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:36%;
+  left:40%;
+}
+
+          
+/*DOORWAY4 */ 
+.box4 {
+  width:50%;
+  height:50%;
+  background-image:   url(pinkhouse/door4.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-4 {
+  top:37%;
+  left:45%;
+}
+      
+/*FOUNTAIN */ 
+.box5 {
+  width:15%;
+  height:15%;
+  background-image:   url(pinkhouse/pinkfountain.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-5 {
+  top:43%;
+  left:41%;
+}
+
+/*PINKMAN */ 
+.box6 {
+  width:45%;
+  height:45%;
+  background-image:   url(pinkhouse/pinkman.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-6 {
+  top:54%;
+  left:41%;
+}
+.box6:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  right:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}  
+            /*BUTTON */ 
+      
+.box8 {
+  width:10%;
+  height:10%;
+  background-image: url(pinkhouse/pinkbackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-8 {
+  top:5%;
+  left:5%;
+}
+  
+        }
+</style>
+                    <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/littlelamb.ogg', 'audio/littlelamb.mp3']
+     }).play();
+</script>
+<!-- BACKGROUND-->
+    
+<img src=pinkhouse/pinkroom.png width=100% height=100%>
+    
+    <!-- DOOR1-->
+   <a href="pinkbedroomrand.html">
+  <div id="pin-1" class="box">
+      
+      
+    </div>
+       </a>
+ <!-- DOOR2-->
+    
+  <a href="pinkbedroomrand.html">
+  <div id="pin-2" class="box2">
+      
+    </div>
+        </a>
+
+ <!-- DOOR3-->
+    
+  <a href="pinkbedroomrand.html">
+  <div id="pin-3" class="box3">
+      
+    </div>
+        </a>
+
+ <!-- DOOR4-->
+    
+  <a href="pinkbedroomrand.html">
+  <div id="pin-4" class="box4">
+      
+    </div>
+        </a>
+
+     <!-- FOUNTAIN-->
+    
+  <a href="pinkclosefountain.html">
+  <div id="pin-5" class="box5">
+      
+    </div>
+        </a>
+     <!-- PINKMAN-->
+
+  <a href="pinkman1.html">
+  <div id="pin-6" class="box6">
+
+    </div>
+           </a>
+        
+     <!-- BACK-->
+    
+   <a href="page1.html">
+  <div id="pin-8" class="box8">
+      
+    </div>
+        </a>
+   
+
+    </body>
+</html>

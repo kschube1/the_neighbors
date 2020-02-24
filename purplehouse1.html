@@ -1,0 +1,443 @@
+<html>
+    <head>
+        <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    </head>
+    <!-- IMPORTANT START -->
+
+
+<script type="text/javascript">
+
+
+var ajaxFunction = function() {
+	//alert("here comes ajax get your butts ready");
+	$
+			.ajax({
+				type : "post",
+				url : "progress.php",
+				data : {
+					event_id : "12"
+				}
+			})
+			.done(
+					function(data) {
+
+						//alert("your progress is being tracked! YAY!! "
+						//		+ "!!!!!!!"
+						//		+ data
+						//		+ "!!!!!!!")
+					})
+			.fail(
+					function(a, b, c) {
+						alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+					})
+
+}
+
+$(document).ready(ajaxFunction)
+</script>
+
+<body>
+    <style>
+         /*-------TABLET VIEWING------ */ 
+@media only screen and (max-width: 900px) {
+    map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*PLANT */ 
+.box {
+  width:40%;
+  height:40%;
+  background-image:   url(purplehouse/purpleplant.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:58%;
+  left:-10%;
+}
+.box:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}    
+/*DOORWAY */ 
+.box2 {
+  width:75%;
+  height:75%;
+  background-image:   url(purplehouse/purpledoorwaytablet.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:17%;
+  left:44%;
+}
+      /*COUCH */ 
+.box3 {
+  width:30%;
+  height:30%;
+  background-image:   url(purplehouse/purplecouchtablet.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:63%;
+  left:23%;
+}
+.box3:active > .pin-text3 {
+  display: block;
+}
+
+.pin-text3 {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text3 h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}  
+            /*BACK BUTTON */ 
+.box4 {
+  width:10%;
+  height:10%;
+  background-image:   url(purplehouse/purplebackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-4 {
+  top:5%;
+  left:5%;
+}   
+        }
+        /*-------PHONE VIEWING------ */  
+@media only screen and (max-width: 480px) {
+    map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*PLANT */ 
+.box {
+  width:30%;
+  height:30%;
+  background-image:   url(purplehouse/purpleplant.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:67%;
+  left:-3%;
+}
+.box:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}  
+              
+/*DOORWAY */ 
+.box2 {
+  width:50%;
+  height:50%;
+  background-image:   url(purplehouse/purpledoorwayphone.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:41%;
+  left:59%;
+}
+    /*COUCH */ 
+.box3 {
+  width:30%;
+  height:30%;
+  background-image:   url(purplehouse/purplecouchphone.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:63%;
+  left:23%;
+}
+.box3:active > .pin-text3 {
+  display: block;
+}
+
+.pin-text3 {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text3 h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}  
+          /*BACK BUTTON */ 
+.box4 {
+  width:10%;
+  height:10%;
+  background-image:   url(purplehouse/purplebackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-4 {
+  top:5%;
+  left:5%;
+}     
+}
+        
+        /*-------REGULAR VIEWING------ */ 
+@media only screen and (min-width: 901px) {
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*PLANT */ 
+.box {
+  width:40%;
+  height:40%;
+  background-image:   url(purplehouse/purpleplant.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:58%;
+  left:-10%;
+}
+.box:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}       
+    
+          
+/*DOORWAY */ 
+.box2 {
+  width:70%;
+  height:70%;
+  background-image:   url(purplehouse/purpledoorway.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:22%;
+  left:50%;
+}
+    /*COUCH */ 
+.box3 {
+  width:40%;
+  height:40%;
+  background-image:   url(purplehouse/purplecouch.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:54%;
+  left:23%;
+}
+.box3:active > .pin-text3 {
+  display: block;
+}
+
+.pin-text3 {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text3 h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}  
+        /*BACK BUTTON */ 
+.box4 {
+  width:10%;
+  height:10%;
+  background-image:   url(purplehouse/purplebackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-4 {
+  top:5%;
+  left:5%;
+}
+        }
+   
+       
+</style>
+<!-- BACKGROUND-->
+                <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/twinkletwinkle.ogg', 'audio/twinkletwinkle.mp3']
+     }).play();
+</script>
+
+<img src=purplehouse/purpleroom.png width=100% height=100%>
+
+ <!-- DOORWAY-->
+    
+   <a href="purplebedroom.html">
+  <div id="pin-2" class="box2">
+      
+    </div>
+        </a>
+
+ <!-- COUCH-->
+  <div id="pin-3" class="box3">
+      <div class="pin-text3">
+      <h3>There's dust on this couch.</h3>
+    </div>
+      
+    </div>
+       <!-- PLANT-->
+
+  <div id="pin-1" class="box">
+      <div class="pin-text">
+      <h3>It looks like a dead plant.</h3>
+    </div>
+      
+    </div>
+    <!-- BACK-->
+    
+   <a href="page1.html">
+  <div id="pin-4" class="box4">
+      
+    </div>
+        </a> 
+
+    </body>
+
+</html>

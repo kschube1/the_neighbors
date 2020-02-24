@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    </head>
+    <!-- IMPORTANT START -->
+
+
+<script type="text/javascript">
+
+
+var ajaxFunction = function() {
+	//alert("here comes ajax get your butts ready");
+	$
+			.ajax({
+				type : "post",
+				url : "progress.php",
+				data : {
+					event_id : "62"
+				}
+			})
+			.done(
+					function(data) {
+
+					//	alert("your progress is being tracked! YAY!! "
+					//			+ "!!!!!!!"
+						//		+ data
+						//		+ "!!!!!!!")
+					})
+			.fail(
+					function(a, b, c) {
+						alert("Your progress is not being tracked. Please contact developer: kschube1@unca.edu.")
+					})
+
+}
+
+$(document).ready(ajaxFunction)
+</script>
+<body>
+    <style>
+.map {
+  margin:10px;
+  border:5px solid red;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+/*BED */ 
+.box {
+  width:40%;
+  height:40%;
+  background-image:   url(purplehouse/purplebed.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-1 {
+  top:58%;
+  left:50%;
+}
+.box:active > .pin-text {
+  display: block;
+}
+
+.pin-text {
+    font-family: monospace;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:50%;
+  white-space:nowrap;
+  display: none;
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}       
+    
+          
+/*CLOSET */ 
+.box2 {
+  width:55%;
+  height:55%;
+  background-image:   url(purplehouse/purpleclosetdoor.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-2 {
+  top:44%;
+  left:-15%;
+}
+  /*HIDDEN DOOR  */ 
+.box3 {
+  width:25%;
+  height:25%;
+  background-image:   url(purplehouse/purplesmallhiddendoor.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-3 {
+  top:35%;
+  left:80%;
+}
+          
+        /*BACK BUTTON */ 
+.box4 {
+  width:10%;
+  height:10%;
+  background-image:   url(purplehouse/purplebackbutton.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+
+#pin-4 {
+  top:5%;
+  left:5%;
+}   
+       
+</style>
+                    <!-- AUDIO-->
+<script type="text/javascript" src="howler.min.js"></script>
+<script type="text/javascript">
+var sound = new Howl({
+	loop: true,
+    src: ['audio/twinkletwinkle.ogg', 'audio/twinkletwinkle.mp3']
+     }).play();
+</script>
+<!-- BACKGROUND-->
+    
+    
+<img src=purplehouse/purplebedroom.png width=100% height=100%>
+    <!-- BED-->
+
+  <div id="pin-1" class="box">
+      <div class="pin-text">
+      <h3>The sheets are still messy.</h3>
+    </div>
+      
+    </div>
+    
+ <!-- DOORWAY-->
+    
+   <a href="purplecloset.html">
+  <div id="pin-2" class="box2">
+      
+    </div>
+        </a>
+     <!-- HIDDEN DOOR-->
+    
+   <a href="purplehiddendoor.html">
+  <div id="pin-3" class="box3">
+      
+    </div>
+        </a>
+
+ <!-- BACK-->
+    
+   <a href="purplehouse1.html">
+  <div id="pin-4" class="box4">
+      
+    </div>
+        </a> 
+
+   
+
+    </body>
+
+</html>

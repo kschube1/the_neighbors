@@ -1,0 +1,89 @@
+<html>
+    <head>
+    </head>
+<body>
+    <!-- 1200 WIDTH-->
+    <style>
+@media screen and (max-width: 1200px) {
+      body { 
+           position: absolute; 
+          Z-INDEX: 5; 
+          left: 0px; 
+          top: 0px; 
+          height: 100%; 
+          width: 100%; 
+          opacity:1;>
+          background-image: url(redhouse/redkitchen.png);
+          
+  }
+    .fridge {
+         position: absolute; 
+        Z-INDEX: 7; 
+        left: 14%; 
+        top: 26%;  
+        opacity:1;
+    }
+    
+
+}
+           </style>
+<!-- BACKGROUND-->
+    
+<div style=" position: absolute; Z-INDEX: 5; left: 0px; top: 0px; height: 100%; width: 100%; opacity:1;">
+    
+
+
+<img src=../../Documents/redhouse/redkitchen.png width=100% height=100%>
+    
+    </div>
+
+<!-- FRIDGE-->
+            <script type="text/javascript">
+  function multipleImg(id,img1,img2, img3, img4) {
+    src=document.getElementById(id).src;
+    if (src.match(img1)) {
+      document.getElementById(id).src=img2;
+    } else if(src.match(img2)) {
+      document.getElementById(id).src=img3;
+    } else if(src.match(img3)) {
+      document.getElementById(id).src=img4;
+    
+        document.getElementById(id).onclick = function() {
+        window.location.href = "redaltarroom.html"};
+    }
+  }
+    
+  
+</script>
+    <div style=" position: absolute; Z-INDEX: 7; left: 14%; top: 26%;  opacity:1;">
+        
+<img id="desat3"  onclick="multipleImg('desat3', 'redhouse/fridge.png', 'redhouse/fridge2.png', 'redhouse/fridge3.png', 'redhouse/fridge4.png')" src='../../Documents/redhouse/fridge.png' >
+
+
+        </div>
+  
+<!-- SINK-->
+        <script type="text/javascript">
+  function swapImage(id,primary,secondary) {
+    src=document.getElementById(id).src;
+    if (src.match(primary)) {
+      document.getElementById(id).src=secondary;
+    } else {
+      document.getElementById(id).src=primary;
+    }
+  }
+</script>
+    <div style=" position: absolute; Z-INDEX: 7; left: 56%; top: 52%; opacity:1;">
+        
+<img id="desat2" width = 100% height = "auto" onclick="swapImage('desat2', 'redhouse/sink.png', 'redhouse/sinkon.png')" src='../../Documents/redhouse/sink.png'>
+
+
+        </div>
+<!-- STOVE-->
+    <div style=" position: absolute; Z-INDEX: 7; left: 72%; top: 54%; opacity:1;">
+
+<img id="hot" onclick = "swapImage('hot', 'redhouse/stove.png', 'redhouse/stoveon.png')" src='../../Documents/redhouse/stove.png'>
+          </div>                                                                                                    
+
+    </body>
+</html>
